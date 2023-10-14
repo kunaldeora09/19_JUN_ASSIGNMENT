@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Q&A_Assignment</title>
+
+    <style>
+        * {
+          margin: 20px;
+        }
+      </style>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"
+  ></script>
+
+  </head>
+  <body>
+    <h1>1. What is jQuery?</h1>
+    <p>
+      jQuery is a lightweight, "write less, do more", JavaScript library. The
+      purpose of jQuery is to make it much easier to use JavaScript on your
+      website. jQuery takes a lot of common tasks that require many lines of
+      JavaScript code to accomplish, and wraps them into methods that you can
+      call with a single line of code.
+    </p>
+    <hr />
+    <h1>
+      2. How to Apply CSS Using JQuery, How to Add Class and Remove Class in
+      Jquery, JQuery Animation?
+    </h1>
+    <p>1. addClass() - Adds one or more classes to the selected elements. <br>
+        2. removeClass() - Removes one or more classes from the selected elements. <br>
+        3. toggleClass() - Toggles between adding/removing classes from the selected elements. <br>
+        4. css() - Sets or returns the style attribute. <br>
+    5. animate() - is used to create custom animations.</p>
+    <hr>
+    <h1>3. How to create slider with animation? </h1>
+    <p>We will call our function every time the play button is clicked using jQuery. <br>
+        1. We will start or restart the interval using the startSlider function. <br>
+        2. Because our slider is currently playing, we will hide the play button using $(this). ... <br>
+        3. We will then show our pause button so the user can stop the animation at will: $().</p>
+        <hr>
+        <h1>4. Event bubbling tickling example </h1>
+
+        <div class="great-grand-parent">
+            <div class="grand-parent">
+              <ul class="parent">
+                <li class="child-one">Child One</li>
+                <li class="child-two">Child Two</li>
+              </ul>
+            </div>
+          </div>
+
+          <script>
+            //   $( ".child-two" ).parent().css( "border", "2px solid red" );
+              $( ".child-two" ).parents().css( "border", "2px solid blue" );
+            //   $( ".child-two" ).parentsUntil(".great-grand-parent").css( "border", "2px solid teal" );
+            //   $( ".child-two" ).parentsUntil(".grand-parent").css( "border", "2px solid teal" );
+            </script>
+
+  </body>
+</html>
