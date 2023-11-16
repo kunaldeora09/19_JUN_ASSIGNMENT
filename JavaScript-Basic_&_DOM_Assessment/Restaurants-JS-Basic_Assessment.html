@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurants Booking Form Assessment</title>
+    <style>
+      .container {
+        width: 90%;
+        border: 2px solid black;
+        margin: 100px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <table>
+          <tr>
+            <td>
+              <label for="booking">Choice of booking:</label>
+            </td>
+            <td>
+              <select id="choice" required>
+                <option value="0">Select</option>
+                <option id="full" value="1">Full day booking</option>
+                <option id="half" value="2">Half day booking</option>
+                <option id="hour" value="3">Hourly booking</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="name">Name:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="name"
+                id="user"
+                placeholder="User Name"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mobile">Mobile Number:</label>
+            </td>
+            <td>
+              <input
+                type="number"
+                name="num"
+                id="mobile"
+                placeholder="Mobile Number"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email">Email:</label>
+            </td>
+            <td>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="person">No of person</label>
+            </td>
+            <td>
+              <input
+                type="number"
+                name="person"
+                id="person"
+                placeholder="No of person"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="date">Date:</label>
+            </td>
+            <td>
+              <input type="date" name="date" id="date" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="time">Time:</label>
+            </td>
+            <td>
+              <input type="time" name="time" id="time" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="slot">Slot:</label>
+            </td>
+            <td>
+              <select id="slot" required>
+                <option value="select">Select</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" name="submit" id="submit" />
+              <input type="reset" name="reset" id="reset" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <script>
+    </script>
+  </body>
+</html>
