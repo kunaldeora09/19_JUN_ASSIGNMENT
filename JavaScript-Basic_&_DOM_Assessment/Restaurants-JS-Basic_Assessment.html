@@ -8,11 +8,16 @@
       .container {
         width: 90%;
         border: 2px solid black;
-        margin: 100px auto;
+        margin-left: 60px;
+      }
+
+      h1 {
+        text-align: center;
       }
     </style>
   </head>
   <body>
+    <h1>Restaurant Booking Form</h1>
     <div class="container">
       <form action="">
         <table>
@@ -21,7 +26,7 @@
               <label for="booking">Choice of booking:</label>
             </td>
             <td>
-              <select id="choice" required>
+              <select id="choice" onchange="sh()" required>
                 <option value="0">Select</option>
                 <option id="full" value="1">Full day booking</option>
                 <option id="half" value="2">Half day booking</option>
@@ -117,7 +122,7 @@
           <tr>
             <td>
               <input type="submit" name="submit" id="submit" />
-              <input type="reset" name="reset" id="reset" />
+              <input type="reset" onclick="dh()" name="reset" id="reset" />
             </td>
           </tr>
         </table>
@@ -125,6 +130,75 @@
     </div>
 
     <script>
+      let a = document.getElementById("choice");
+      function sh() {
+        // if(a.value == "1")
+        // {
+        //   document.getElementById("time").disabled = true;
+        //   document.getElementById("slot").disabled = true;
+        // }
+        // else{
+        //   document.getElementById("time").disabled = false;
+        //   document.getElementById("slot").disabled = false;
+        // }
+
+        // if (a.value == "1") {
+        //   document.getElementById("time").disabled = true;
+        //   document.getElementById("slot").disabled = true;
+        //   console.log("1");
+        // } else if (a.value == "2") {
+        //   document.getElementById("time").disabled = true;
+        //   console.log("2");
+        // } else if (a.value == "3") {
+        //   document.getElementById("slot").disabled = true;
+        //   console.log("3");
+        // } else {
+        //   document.getElementById("time").disabled = false;
+        //   document.getElementById("slot").disabled = false;
+        // }
+        switch (a.value) {
+          case "1":
+            document.getElementById("time").disabled = true;
+            document.getElementById("slot").disabled = true;
+            break;
+          case "2":
+            document.getElementById("time").disabled = true;
+            document.getElementById("slot").disabled = false;
+            break;
+          case "3":
+            document.getElementById("slot").disabled = true;
+            document.getElementById("time").disabled = false;
+            break;
+          default:
+            document.getElementById("time").disabled = false;
+            document.getElementById("slot").disabled = false;
+            break;
+        }
+      }
+
+      function dh() {
+        document.getElementById("time").disabled = false;
+        document.getElementById("slot").disabled = false;
+      }
+      //   function sh() {
+      //   if(a.value == "2")
+      //   {
+      //     document.getElementById("time").disabled = true;
+      //   }
+      //   else{
+      //     document.getElementById("time").disabled = false;
+      //   }
+      // }
+
+      // function sh() {
+      //   if(a.value == "3")
+      //   {
+      //     document.getElementById("slot").disabled = true;
+      //   }
+      //   else{
+      //     document.getElementById("slot").disabled = false;
+      //   }
+      // }
     </script>
   </body>
 </html>
